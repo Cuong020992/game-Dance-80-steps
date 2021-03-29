@@ -1,0 +1,76 @@
+
+.canvas {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 7%;
+    border: 20px solid black;
+    background-image: url("background dance 2.jpg");
+    background-size: cover;
+    position: absolute;
+}
+
+.dancer {
+    position: absolute;
+    margin-left: 55%;
+    margin-top: 13%;
+    width: 200px;
+}
+
+.shadow {
+    position: absolute;
+    margin-left: 55%;
+    margin-top: 16%;
+    width: 200px;
+}
+
+.playBar {
+    position: absolute;
+    margin-left: 35%;
+    margin-top: 17%;
+    width: 340px;
+    height: 150px;
+}
+
+.btn1 {
+    position: absolute;
+    margin-left: 37.5%;
+    margin-top: 20.7%;
+    width: 45px;
+}
+
+.btn2 {
+    position: absolute;
+    margin-left: 41%;
+    margin-top: 20.7%;
+    width: 45px;
+}
+
+.btn3 {
+    position: absolute;
+    margin-left: 44.5%;
+    margin-top: 20.7%;
+    width: 45px;
+}
+
+.btn4 {
+    position: absolute;
+    margin-left: 48%;
+    margin-top: 20.7%;
+    width: 45px;
+}
+
+.btn5 {
+    position: absolute;
+    margin-left: 52%;
+    margin-top: 20.7%;
+    width: 45px;
+}
+
+.score{
+    position: absolute;
+    margin-left: 49%;
+    margin-top: 10%;
+    font-size: 40px;
+    font-weight: bolder;
+    color: yellow;
+}
