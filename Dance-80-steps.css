@@ -1,10 +1,11 @@
 
+
 .canvas {
     width: 60%;
     margin-left: 20%;
     margin-top: 7%;
     border: 20px solid black;
-    background-image: url("background dance 2.jpg");
+    background-image: url("background.jpg");
     background-size: cover;
     position: absolute;
 }

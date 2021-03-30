@@ -1,6 +1,3 @@
-
-
-
 //position button
 const slot1 = document.getElementById('slot1');
 const slot2 = document.getElementById('slot2');
@@ -30,6 +27,7 @@ const dancers = [
     'anh_76.png', 'anh_77.png', 'anh_78.png', 'anh_79.png', 'anh_80.png',
 ];
 
+
 //image button
 const readyButton = ['readyUpBtn.png', 'readyDownBtn.png', 'readyLeftBtn.png', 'readyRightBtn.png'];
 const trueButton = ['trueUpBtn.png', 'trueDownBtn.png', 'trueLeftBtn.png', 'trueRightBtn.png']
@@ -43,7 +41,6 @@ var a = [];
 let myAudio = document.getElementById('myAudio');
 myAudio.volume = 0.2;
 myAudio.loop = true;
-myAudio.play();
 
 //random Button
 function randomButtonReady() {
@@ -53,6 +50,7 @@ function randomButtonReady() {
     }
 
 }
+
 randomButtonReady();
 
 //button Ready Random
@@ -65,12 +63,15 @@ function btnReady() {
     slot5.src = `images/button/ready-button/${readyButton[a[4]]}`;
 
 }
+
 btnReady();
 
 
 var count = 0;
-let score = 0;
-function loopBar(){
+var score = 0;
+var miss = 0;
+
+function loopBar() {
 
 }
 
@@ -91,22 +92,46 @@ function checkBtn(event) {
         let myTing = new Audio('true.mp3');
         myTing.play();
         score++;
-        document.getElementById('score').innerHTML = 'SCORE: ' +score;
+        document.getElementById('score').innerHTML = 'SCORE: ' + score;
+        checkWinner();
+
     } else {
         slot[count].src = `images/button/false-button/${falseButton[a[count]]}`;
         let myBeep = new Audio('false.mp3');
         myBeep.play();
+        miss++;
+        checkLoser();
     }
     count++;
-
 }
+
 window.addEventListener('keydown', checkBtn);
+
+//check winner
+function checkWinner() {
+    if (score >= 10) {
+        alert('NGƯỜI KHÔNG THUA LÀ NGƯỜI THẮNG =))))))')
+        alert('bạn được ' + score + ' điểm');
+        location.reload();
+    }
+}
+
+
+
+//check Loser
+function checkLoser() {
+    if (miss >= 5) {
+        alert('bạn được ' + score + ' điểm');
+        alert('NGƯỜI KHÔNG THẮNG LÀ NGƯỜI THUA =))))');
+        location.reload();
+    }
+}
+
 
 //onload Page
 function loadPage() {
     Img.src = `images/dancer/${dancers[0]}`;
     changeImg();
-
 }
 
 //loop image dacer
