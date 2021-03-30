@@ -130,14 +130,14 @@ function checkLoser() {
 
 //onload Page
 function loadPage() {
-    Img.src = `images/dancer/${dancers[0]}`;
+    Img.src = dancers[0];
     changeImg();
 }
 
 //loop image dacer
 function changeImg() {
     setInterval(() => {
-        Img.src = `images/dancer/${dancers[index]}`;
+        Img.src = dancers[index];
         index++;
         if (index == dancers.length - 1) {
             index = 0;
